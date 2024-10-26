@@ -5,7 +5,7 @@ set -euox pipefail
 echo "Tweaking existing desktop config..."
 
 if [[ ${IMAGE} =~ bluefin|bazzite ]]; then
-  rsync -rvK /ctx/system_files/silverblue/ /
+  rsync -rvKL /ctx/system_files/silverblue/ /
 
   systemctl enable dconf-update.service 
   systemctl enable rpm-ostree-countme.timer

@@ -59,10 +59,10 @@ rpm-ostree install \
   zsh
 
 # common packages excluded from desktop
-rpm-ostree remove \
+rpm-ostree override remove \
   firefox \
   firefox-langpacks \
-  gnome-tour
+  gnome-tour || true
 
 ## github direct installs
 #/ctx/build_files/github-release-install.sh twpayne/chezmoi x86_64
