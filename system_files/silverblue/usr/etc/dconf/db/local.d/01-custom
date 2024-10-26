@@ -1,0 +1,28 @@
+[org/gnome/shell]
+disable-user-extensions=false
+favorite-apps = ['org.mozilla.firefox.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'com.github.rafostar.Clapper', 'org.libreoffice.LibreOffice.writer.desktop' ]
+
+[org/gnome/desktop/interface]
+font-antialiasing='rgba'
+font-hinting='slight'
+
+[org/gnome/mutter]
+check-alive-timeout=uint32 30000
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Control><Alt>t'
+command='gnome-terminal'
+name='gnome-terminal'
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+home=['<Super>e']
+
+[org/gnome/software]
+allow-updates=true
+download-updates=false
+download-updates-notify=true
+
+[org/gnome/terminal/legacy/keybindings]
+next-tab='<Primary>Tab'
+prev-tab='<Primary><Shift>Tab'

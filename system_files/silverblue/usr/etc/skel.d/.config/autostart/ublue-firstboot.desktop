@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Desktop FirstBoot Setup
+Comment=Sets up Desktop Correctly On FirstBoot
+Exec=gnome-terminal --geometry=132x43 -- /usr/share/ublue-os/firstboot/firstboot.sh
+Icon=org.gnome.Terminal
+Type=Application
+Categories=Utility;System;
+Name[en_US]=startup
