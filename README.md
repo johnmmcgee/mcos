@@ -1,6 +1,6 @@
 # mcOS
 
-[![build-ublue](https://github.com/johnmmcgee/mcos/actions/workflows/build.yml/badge.svg)](https://github.com/johnmmcgee/mcod/actions/workflows/build.yml)
+[![build-ublue](https://github.com/johnmmcgee/mcos/actions/workflows/build.yml/badge.svg)](https://github.com/johnmmcgee/mcos/actions/workflows/build.yml)
 
 These are mostly stock projected bluefin images that I created for my own personal use.  
 Intial ideas for this repo stemed from: 
