@@ -17,3 +17,9 @@ rpm-ostree install \
   netcat \
   nmap \
   sanoid
+
+rpm-ostree remove \
+  nfs-utils-coreos
+
+rpm-ostree install \
+  nfs-utils
