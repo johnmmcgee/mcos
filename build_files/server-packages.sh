@@ -22,6 +22,6 @@ rpm-ostree override remove \
         nfs-utils-coreos \
         || true
 
-rpm-ostree override install \
+rpm-ostree install \
         nfs-utils \
         || true
