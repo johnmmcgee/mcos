@@ -19,6 +19,4 @@ if [[ ${IMAGE} =~ bluefin|bazzite ]]; then
   chmod a+x /usr/share/ublue-os/firstboot/*.sh 
   rm -f /usr/share/applications/htop.desktop 
   rm -f /usr/share/applications/nvtop.desktop 
-  rm -f /usr/libexec/ublue-motd
-#  rm -rf /usr/share/ublue-os/motd/*
 fi
