@@ -15,6 +15,13 @@ rpm-ostree install \
   lm_sensors \
   lshw \
   netcat \
-  nfs-utils \
   nmap \
   sanoid
+
+rpm-ostree override remove \
+        nfs-utils-coreos \
+        || true
+
+rpm-ostree override install \
+        nfs-utils \
+        || true
