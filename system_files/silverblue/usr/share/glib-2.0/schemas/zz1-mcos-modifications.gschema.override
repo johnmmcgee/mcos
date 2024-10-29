@@ -10,4 +10,4 @@ monospace-font-name="Input Mono weight=275 11"
 [org.gnome.desktop.wm.preferences]
 resize-with-right-button=true
 theme="Adwaita"
-titlebar-font="Output Sans Testing Bold 10"
+titlebar-font="Inter Bold 10"
