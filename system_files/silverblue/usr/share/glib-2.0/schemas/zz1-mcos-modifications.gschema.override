@@ -1,0 +1,13 @@
+[org.gnome.desktop.interface]
+cursor-theme="Quintom_Snow"
+color-scheme="prefer-dark"
+icon-theme="Papirus-Dark"
+gtk-theme="Adwaita-dark"
+font-name="Output Sans Testing 10"
+document-font-name="Inter 10"
+monospace-font-name="Input Mono weight=275 11"
+
+[org.gnome.desktop.wm.preferences]
+resize-with-right-button=true
+theme="Adwaita"
+titlebar-font="Inter Bold 10"

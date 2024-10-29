@@ -19,4 +19,13 @@ if [[ ${IMAGE} =~ bluefin|bazzite ]]; then
   chmod a+x /usr/share/ublue-os/firstboot/*.sh 
   rm -f /usr/share/applications/htop.desktop 
   rm -f /usr/share/applications/nvtop.desktop 
+
+  # custom gnome overrides
+  mkdir -p /tmp/ublue-schema-test && \
+  find /usr/share/glib-2.0/schemas/ -type f ! -name "*.gschema.override" -exec cp {} /tmp/ublue-schema-test/ \; && \
+  cp /usr/share/glib-2.0/schemas/*-mcos-modifications.gschema.override /tmp/ublue-schema-test/ && \
+  echo "Running error test for mcos gschema override. Aborting if failed." && \
+  glib-compile-schemas --strict /tmp/ublue-schema-test || exit 1 && \
+  echo "Compiling gschema to include mcos setting overrides" && \
+  glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null
 fi
