@@ -115,7 +115,7 @@ jobs:
           esac
 
           if [[ "${{ matrix.tag_version }}" == "latest" ]]; then
-            tag=${tag}-latest
+            tag=${tag}
           fi
 
           BUILD_TAGS+=("${tag}" "${tag}-${TIMESTAMP}")
