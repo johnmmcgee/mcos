@@ -114,8 +114,8 @@ jobs:
             tag="${{ env.image }}"
           esac
 
-          if [[ "${{ matrix.tag_version }}" == "beta" ]]; then
-            tag=${tag}-beta
+          if [[ "${{ matrix.tag_version }}" == "latest" ]]; then
+            tag=${tag}-latest
           fi
 
           BUILD_TAGS+=("${tag}" "${tag}-${TIMESTAMP}")
