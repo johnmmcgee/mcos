@@ -14,11 +14,11 @@ jobs:
     permissions:
       packages: write
     steps:
-      - name: Delete Images Older Than 90 Days
+      - name: Delete Images Older Than 30 Days
         uses: dataaxiom/ghcr-cleanup-action@v1.0.13
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          older-than: 90 days
+          older-than: 30 days
           delete-orphaned-images: true
           #packages: mcos
           #keep-n-tagged: 7

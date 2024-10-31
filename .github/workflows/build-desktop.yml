@@ -26,7 +26,6 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          #- bazzite-deck-gnome
           - bluefin
           - bluefin-nvidia
         tag_version:
@@ -45,12 +44,8 @@ jobs:
             base_image=${{ matrix.image }}
             tag_version=${{ matrix.tag_version }}
 
-            if [[ "$tag_version" == "stable" && ! "${image}" =~ bazzite ]]; then
+            if [[ "$tag_version" == "stable" ]]; then
               tag_version="${tag_version}-daily"
-            fi
-
-            if [[ "$tag_version" == "beta" && ${image} =~ bazzite ]]; then
-              tag_version="unstable"
             fi
 
             if [[ ! "${image}" =~ cosmic ]]; then
@@ -62,9 +57,6 @@ jobs:
             case "${image}" in
             "bluefin"*|"aurora"*)
               upstream_repo=bluefin
-              ;;
-            "bazzite"*)
-              upstream_repo=bazzite
               ;;
             *)
               echo "Invalid Choice. Exiting..."

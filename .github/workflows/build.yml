@@ -26,11 +26,11 @@ jobs:
     with:
         tag_version: stable
 
-#  push-desktop-beta:
-#    uses: ./.github/workflows/build-desktop.yml
-#    secrets: inherit
-#    with:
-#        tag_version: beta
+  push-desktop-latest:
+    uses: ./.github/workflows/build-desktop.yml
+    secrets: inherit
+    with:
+        tag_version: latest
 
   push-server:
     uses: ./.github/workflows/build-server.yml
