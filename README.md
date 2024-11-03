@@ -9,29 +9,34 @@ Intial ideas for this repo stemed from:
 
 ## Usage
 
-We build `latest` which points to Fedora 40:
+We build `stable` which follows the project-bluefin stable branch.  We also build `-latest` that follows the 'latest' branch. 
+See: https://docs.projectbluefin.io/administration under Upgrades and Throttle Settings. 
 
-  Standard
+  Standard - stable
   
-    rpm-ostree rebase ostree-unverified-registry:ghcr.io/johnmmcgee/mcos:bluefin
     rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:bluefin
 
-  NVidia drivers
+  Standard - latest
   
-    rpm-ostree rebase ostree-unverified-registry:ghcr.io/johnmmcgee/mcos:bluefin-nvidia
+    rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:bluefin-latest
+
+  NVidia drivers - stable
+  
     rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:bluefin-nvidia
+
+  NVidia drivers - latest
+  
+    rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:bluefin-nvidia-latest
 
   uCore
   
-    rpm-ostree rebase ostree-unverified-registry:ghcr.io/johnmmcgee/mcos:ucore-minimal
     rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:ucore-minimal
 
   uCore NVidia drivers
   
-    rpm-ostree rebase ostree-unverified-registry:ghcr.io/johnmmcgee/mcos:ucore-minimal-nvidia
     rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:ucore-minimal-nvidia
 
-Use the `latest` tag to follow the current latest.  Or you can use the release tag, such as `40`, which is current. 
+
 
 ## Verification
 
