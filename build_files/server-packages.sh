@@ -6,7 +6,7 @@ echo "Running server packages scripts..."
 #/ctx/build_files/server-docker-ce.sh
 
 # common packages installed to desktops and servers
-rpm-ostree install \
+dnf5 install -y \
   cockpit-storaged \
   hdparm \
   igt-gpu-tools \
@@ -18,10 +18,10 @@ rpm-ostree install \
   nmap \
   sanoid
 
-rpm-ostree override remove \
+dnf5 remove -y \
         nfs-utils-coreos \
         || true
 
-rpm-ostree install \
+dnf5 install -y \
         nfs-utils \
         || true

@@ -1,10 +1,12 @@
 # mcOS
 
-[![build-ublue](https://github.com/johnmmcgee/mcos/actions/workflows/build.yml/badge.svg)](https://github.com/johnmmcgee/mcos/actions/workflows/build.yml)
+[![mcos Build Desktop](https://github.com/johnmmcgee/mcos/actions/workflows/build-desktop.yml/badge.svg)](https://github.com/johnmmcgee/mcos/actions/workflows/build-desktop.yml)
+[![bOS Build Server](https://github.com/johnmmcgee/mcos/actions/workflows/build-server.yml/badge.svg)](https://github.com/johnmmcgee/mcos/actions/workflows/build-server.yml)
+
 
 These are mostly stock projected bluefin images that I created for my own personal use.  
 Intial ideas for this repo stemed from: 
-[https://github.com/bsherman/bOS/] (https://github.com/bsherman/bOS)
+[https://github.com/bsherman/bos/] (https://github.com/bsherman/bos)
 
 
 ## Usage

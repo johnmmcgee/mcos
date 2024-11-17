@@ -6,7 +6,7 @@ echo "Running desktop packages scripts..."
 #/ctx/build_files/desktop-1password.sh
 
 # common packages installed to desktops
-rpm-ostree install \
+dnf5 install -y \
   alacritty \
   ansible \
   autofs \
@@ -59,13 +59,13 @@ rpm-ostree install \
   zsh
 
 # common packages excluded from desktop
-rpm-ostree override remove \
+dnf5 remove -y \
   firefox \
   firefox-langpacks \
   gnome-tour || true
 
 ## github direct installs
-#/ctx/build_files/github-release-install.sh twpayne/chezmoi x86_64
+/ctx/build_files/github-release-install.sh twpayne/chezmoi x86_64
 
 # Zed because why not?
 curl -Lo /tmp/zed.tar.gz \
@@ -80,4 +80,4 @@ sed -i "s@Exec=zed@Exec=/usr/lib/zed.app/libexec/zed-editor@g" /usr/share/applic
 # vscode stuff
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo
-rpm-ostree install code
+dnf5 install -y code
