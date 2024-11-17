@@ -27,7 +27,7 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     secrets: inherit
     with:
-      images: '["ucore-minimal", "ucore", "ucore-hci"]'
+      images: '["ucore-minimal"]'
       streams: '["stable"]'
       flavors: '["main", "nvidia"]'
   build-server-testing:
@@ -35,6 +35,6 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     secrets: inherit
     with:
-      images: '["ucore-minimal", "ucore", "ucore-hci"]'
+      images: '["ucore-minimal"]'
       streams: '["testing"]'
       flavors: '["main", "nvidia"]'
