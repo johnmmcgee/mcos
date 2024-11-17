@@ -153,7 +153,7 @@ gen-build-src-dst image="" tag="" flavor="":
 #            else
 #                source_tag="${srctag}-${srcflavor}"
 #            fi
-        else
+#        else
             if [[ "${flavor}" =~ main ]]; then
                 source_tag="${srctag}-zfs"
             else
