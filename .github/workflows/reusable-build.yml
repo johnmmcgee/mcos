@@ -43,12 +43,12 @@ jobs:
             stream: testing
           - image: bazzite-deck
             stream: testing
-          - image: ucore-minimal
-            stream: testing
+#          - image: ucore-minimal
+#            stream: testing
           - image: ucore
             stream: testing
-          - image: ucore-minimal
-            flavor: nvidia
+#          - image: ucore-minimal
+#            flavor: nvidia
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref || github.run_id }}-${{ matrix.image }}-${{ matrix.flavor }}-${{ matrix.stream }}
       cancel-in-progress: true
