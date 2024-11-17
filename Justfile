@@ -146,19 +146,21 @@ gen-build-src-dst image="" tag="" flavor="":
 
     # Tag Version (the SOURCE tag)
     if [[ "${image}" =~ ucore ]]; then
-        if [[ "${image}" == ucore-minimal ]]; then
-            if [[ "${flavor}" =~ main ]]; then
-                source_tag="${srctag}"
-            else
-                source_tag="${srctag}-${srcflavor}"
-            fi
-        else
+## I commented these out while i decide what to do - jmcgee
+#        if [[ "${image}" == ucore-minimal ]]; then
+#            if [[ "${flavor}" =~ main ]]; then
+#                source_tag="${srctag}"
+#            else
+#                source_tag="${srctag}-${srcflavor}"
+#            fi
+#        else
             if [[ "${flavor}" =~ main ]]; then
                 source_tag="${srctag}-zfs"
             else
                 source_tag="${srctag}-${srcflavor}-zfs"
             fi
-        fi
+#        fi
+##
     elif [[ "${image}" =~ bluefin && "${tag}" == stable ]]; then
         source_tag="${srctag}-daily"
     else
