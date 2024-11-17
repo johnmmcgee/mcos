@@ -154,11 +154,11 @@ gen-build-src-dst image="" tag="" flavor="":
 #                source_tag="${srctag}-${srcflavor}"
 #            fi
 #        else
-            if [[ "${flavor}" =~ main ]]; then
-                source_tag="${srctag}-zfs"
-            else
+        if [[ "${flavor}" =~ main ]]; then
+            source_tag="${srctag}-zfs"
+        else
                 source_tag="${srctag}-${srcflavor}-zfs"
-            fi
+        fi
 #        fi
 ## - jmcgee
     elif [[ "${image}" =~ bluefin && "${tag}" == stable ]]; then
