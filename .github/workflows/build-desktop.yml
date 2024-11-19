@@ -1,4 +1,4 @@
-name: mcos Build Desktop
+name: mcOS Build Desktop
 on:
   pull_request:
     branches:
