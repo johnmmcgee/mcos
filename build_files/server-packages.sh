@@ -7,6 +7,7 @@ echo "Running server packages scripts..."
 
 # common packages installed to desktops and servers
 dnf5 install -y \
+  btop \
   cockpit-storaged \
   hdparm \
   igt-gpu-tools \

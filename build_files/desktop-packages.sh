@@ -10,6 +10,7 @@ dnf5 install -y \
   alacritty \
   ansible \
   autofs \
+  btop \
   borgbackup \
   buildah \
   cachefilesd \
