@@ -4,7 +4,7 @@
 [![bOS Build Server](https://github.com/johnmmcgee/mcos/actions/workflows/build-server.yml/badge.svg)](https://github.com/johnmmcgee/mcos/actions/workflows/build-server.yml)
 
 
-These are mostly stock projected bluefin images that I created for my own personal use.  
+These are mostly stock project bluefin images that I created for my own personal use.  
 Intial ideas for this repo stemed from: 
 [https://github.com/bsherman/bos/] (https://github.com/bsherman/bos)
 
