@@ -84,6 +84,6 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 dnf5 install -y code
 
 # ghostty
-dnf copr enable pgdev/ghostty
-dnf install ghostty
+dnf -y copr enable pgdev/ghostty
+dnf install -y ghostty
 sed -i "s@enabled=1@enabled=0@" /etc/yum.repos.d/_copr*.repo
