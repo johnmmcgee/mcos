@@ -16,7 +16,6 @@ dnf5 install -y \
   cachefilesd \
   ddcutil \
   fira-code-fonts \
-  foot \
   gh \
   gnome-shell-extension-appindicator \
   gnome-shell-extension-no-overview \
