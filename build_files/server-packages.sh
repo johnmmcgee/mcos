@@ -5,7 +5,7 @@ set -euox pipefail
 echo "Running server packages scripts..."
 #/ctx/build_files/server-docker-ce.sh
 
-# common packages installed to desktops and servers
+# common packages installed to servers
 dnf5 install -y \
   btop \
   cockpit-storaged \
@@ -17,10 +17,17 @@ dnf5 install -y \
   lshw \
   netcat \
   nmap \
-  sanoid
+  sanoid \
+  tuned \
+  tuned-profiles-atomic \
+  tuned-profiles-cpu-partitioning \
+  tuned-utils \
+  tuned-utils-systemtap
 
+# common packages removed from servers
 dnf5 remove -y \
         nfs-utils-coreos \
+        tailscale \
         || true
 
 dnf5 install -y \
