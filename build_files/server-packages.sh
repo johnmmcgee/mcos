@@ -16,6 +16,7 @@ dnf5 install -y \
   lm_sensors \
   lshw \
   netcat \
+  netdata \
   nmap \
   sanoid \
   tuned \
