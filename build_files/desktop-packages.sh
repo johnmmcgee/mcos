@@ -23,6 +23,7 @@ dnf5 install -y \
   intel-compute-runtime \
   iotop \
   iperf3 \
+  iscan-firmware \
   kitty \
   langpacks-en \
   libretls \
