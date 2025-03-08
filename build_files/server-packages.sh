@@ -7,6 +7,7 @@ echo "Running server packages scripts..."
 
 # common packages installed to servers
 dnf5 install -y \
+  acpica-tools \
   btop \
   cockpit-storaged \
   hdparm \
