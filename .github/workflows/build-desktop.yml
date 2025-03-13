@@ -30,11 +30,11 @@ jobs:
       images: '["bluefin"]'
       streams: '["stable"]'
       flavors: '["main", "nvidia"]'
-  build-desktop-testing:
-    name: Desktop Beta(Testing)
-    uses: ./.github/workflows/reusable-build.yml
-    secrets: inherit
-    with:
-      images: '["bluefin"]'
-      streams: '["beta"]'
-      flavors: '["main", "nvidia"]'
+#  build-desktop-testing:
+#    name: Desktop Beta(Testing)
+#    uses: ./.github/workflows/reusable-build.yml
+#    secrets: inherit
+#    with:
+#      images: '["bluefin"]'
+#      streams: '["beta"]'
+#      flavors: '["main", "nvidia"]'

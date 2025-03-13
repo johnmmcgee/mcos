@@ -15,7 +15,6 @@ dnf5 install -y \
   buildah \
   cachefilesd \
   ddcutil \
-  fira-code-fonts \
   gh \
   gnome-shell-extension-appindicator \
   gnome-shell-extension-no-overview \
@@ -46,7 +45,6 @@ dnf5 install -y \
   python3-pip \
   rclone \
   slirp4netns \
-  source-foundry-hack-fonts \
   stow \
   strace \
   tealdeer \
