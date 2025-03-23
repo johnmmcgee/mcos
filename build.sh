@@ -33,7 +33,7 @@ case "${IMAGE}" in
     ;;
 "ucore"*)
     /ctx/build_files/server-changes.sh
-    /ctx/build_files/server-cockpit-zfs.sh
+    /ctx/build_files/server-cockpit-modules.sh
     /ctx/build_files/server-packages.sh
     ;;
 esac

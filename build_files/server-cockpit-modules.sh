@@ -6,7 +6,8 @@ set -ouex pipefail
 dnf5 install -y cockpit-files cockpit-ostree
 
 # cockpit-zfs-manager
-git clone https://github.com/45drives/cockpit-zfs-manager.git
+echo "45 Drives ZFS Manager"
+git clone --quiet https://github.com/45drives/cockpit-zfs-manager.git
 cp -r cockpit-zfs-manager/zfs /usr/share/cockpit
 rm -rf cockpit-zfs-manager
 
@@ -21,3 +22,10 @@ curl -sSL https://scripts.45drives.com/cockpit_font_fix/fonts/patternfly.woff -o
 mkdir -p /usr/share/cockpit/static/fonts
 
 curl -sSL https://scripts.45drives.com/cockpit_font_fix/fonts/OpenSans-Semibold-webfont.woff -o /usr/share/cockpit/static/fonts/OpenSans-Semibold-webfont.woff
+
+
+# cockpit-389-console
+echo "389 DS Console"
+git clone --quiet https://github.com/389ds/389-ds-base.git
+cp -r 389-ds-base/src/cockpit/389-console/src /usr/share/cockpit/389-console
+rm -rf 389-ds-base
