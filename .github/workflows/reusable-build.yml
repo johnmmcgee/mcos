@@ -127,11 +127,11 @@ jobs:
         run: |
           sudo just build "${{ matrix.image }}" "${{ matrix.stream }}" "${{ matrix.flavor }}"
 
-      - name: Rechunk Image
-        id: rechunk
-        shell: bash
-        run: |
-          sudo just rechunk "${{ matrix.image }}" "${{ matrix.stream }}" "${{ matrix.flavor }}"
+#      - name: Rechunk Image
+#        id: rechunk
+#        shell: bash
+#        run: |
+#          sudo just rechunk "${{ matrix.image }}" "${{ matrix.stream }}" "${{ matrix.flavor }}"
 
       - name: Tag Images
         shell: bash
