@@ -26,11 +26,11 @@ curl -sSL https://scripts.45drives.com/cockpit_font_fix/fonts/OpenSans-Semibold-
 
 # cockpit-389-console
 echo "389 DS Console"
-dnf5 install nodejs
+dnf5 install -y nodejs
 git clone --quiet https://github.com/389ds/389-ds-base.git
 cd 389-ds-base/src/cockpit/389-console/
 ./build.js
 cd -
 cp -r 389-ds-base/src/cockpit/389-console/dist /usr/share/cockpit/389-console
 rm -rf 389-ds-base
-dnf5 remove nodejs
+dnf5 remove -y nodejs
