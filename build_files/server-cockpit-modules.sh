@@ -29,6 +29,8 @@ echo "389 DS Console"
 dnf5 install -y nodejs
 git clone --quiet https://github.com/389ds/389-ds-base.git
 cd 389-ds-base/src/cockpit/389-console/
+npm clean
+npm install
 ./build.js
 cd -
 cp -r 389-ds-base/src/cockpit/389-console/dist /usr/share/cockpit/389-console
