@@ -7,7 +7,7 @@ echo "Running server packages scripts..."
 
 # common packages installed to servers
 dnf5 install -y \
-  389-ds-base \
+#  389-ds-base \
   acpica-tools \
   btop \
   cockpit-storaged \
