@@ -38,4 +38,4 @@ dnf install -y \
         || true
 
 #hacky!
-rpm -i /includes/includes/cockpit-389-ds-3.1.2-1.fc41.noarch.rpm
+rpm -i /includes/cockpit-389-ds-3.1.2-1.fc41.noarch.rpm
