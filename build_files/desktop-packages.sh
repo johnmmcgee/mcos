@@ -6,7 +6,7 @@ echo "Running desktop packages scripts..."
 #/ctx/build_files/desktop-1password.sh
 
 # common packages installed to desktops
-dnf5 install -y \
+dnf install -y \
   alacritty \
   ansible \
   autofs \
@@ -58,7 +58,7 @@ dnf5 install -y \
   zsh
 
 # common packages excluded from desktop
-dnf5 remove -y \
+dnf remove -y \
   firefox \
   firefox-langpacks \
   gnome-tour || true
@@ -79,7 +79,7 @@ sed -i "s@Exec=zed@Exec=/usr/lib/zed.app/libexec/zed-editor@g" /usr/share/applic
 # vscode stuff
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo
-dnf5 install -y code
+dnf install -y code
 
 # ghostty
 dnf -y copr enable pgdev/ghostty

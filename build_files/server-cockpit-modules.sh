@@ -3,7 +3,7 @@
 set -ouex pipefail
 
 # cockpit extensions not in ucore
-dnf5 install -y cockpit-files cockpit-ostree
+dnf install -y cockpit-files cockpit-ostree
 
 # cockpit-zfs-manager
 echo "45 Drives ZFS Manager"
@@ -26,7 +26,7 @@ curl -sSL https://scripts.45drives.com/cockpit_font_fix/fonts/OpenSans-Semibold-
 
 # cockpit-389-console
 #echo "389 DS Console"
-#dnf5 install -y nodejs
+#dnf install -y nodejs
 #git clone --quiet https://github.com/389ds/389-ds-base.git
 #cd 389-ds-base/src/cockpit/389-console/
 #npm install > /dev/null
@@ -34,4 +34,4 @@ curl -sSL https://scripts.45drives.com/cockpit_font_fix/fonts/OpenSans-Semibold-
 #cd -
 #cp -r 389-ds-base/src/cockpit/389-console/dist /usr/share/cockpit/389-console
 #rm -rf 389-ds-base
-#dnf5 remove -y nodejs
+#dnf remove -y nodejs

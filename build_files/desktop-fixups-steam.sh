@@ -3,12 +3,12 @@
 set -eoux pipefail
 
 # OBS-VKcapture
-dnf5 -y copr enable kylegospo/obs-vkcapture
+dnf -y copr enable kylegospo/obs-vkcapture
 
 # Bazzite Repos
-dnf5 -y copr enable kylegospo/bazzite
-dnf5 -y copr enable kylegospo/bazzite-multilib
-dnf5 -y copr enable kylegospo/LatencyFleX
+dnf -y copr enable kylegospo/bazzite
+dnf -y copr enable kylegospo/bazzite-multilib
+dnf -y copr enable kylegospo/LatencyFleX
 
 find /etc/yum.repos.d/
 

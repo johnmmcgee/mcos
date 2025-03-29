@@ -15,7 +15,7 @@ if [ -d /usr/libexec/rpm-ostree/wrapped ]; then
     rm -fr /usr/libexec/rpm-ostree
 fi
 
-rpm-ostree install dnf5 dnf5-plugins
+rpm-ostree install dnf dnf-plugins
 
 # temp until https://github.com/ublue-os/main/pull/665 trickles down:
 mkdir -p /usr/share/dnf/plugins
