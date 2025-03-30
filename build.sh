@@ -37,6 +37,7 @@ case "${IMAGE}" in
         /ctx/build_files/server-cockpit-modules.sh
         /ctx/build_files/server-packages.sh
     fi
+esac
 
 #/ctx/build_files/branding.sh
 /ctx/build_files/signing.sh
