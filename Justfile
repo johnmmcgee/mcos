@@ -95,7 +95,7 @@ build image="bluefin":
         TAG_VERSION="${check}"
         ;;
     "ucore"*)
-        BASE_IMAGE=ucore
+        BASE_IMAGE=ucore-minimal
         TAG_VERSION="${check}"
         ;;
     esac
