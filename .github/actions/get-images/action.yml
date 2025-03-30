@@ -29,7 +29,7 @@ runs:
           images+=("bluefin" "bluefin-nvidia")
           ;;
         "Server")
-          images+=("ucore-minimal" "ucore-minimal-nvidia")
+          images+=("ucore-minimal" "ucore" "ucore-nvidia")
           ;;
         esac
 
