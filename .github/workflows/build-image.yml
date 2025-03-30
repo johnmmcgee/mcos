@@ -42,13 +42,6 @@ jobs:
       matrix:
         image: ["${{ fromJson(needs.get-images.outputs.images) }}"]
     steps:
-      - name: Print ENVs
-        shell: bash
-        run: |
-            echo ${{ env.IMAGE_NAME }}
-            echo ${{ steps.get_tags.outputs.tags }}
-            echo ${{ steps.registry_case.outputs.lowercase }}
-            echo ${{ env.REGISTRY_USER }}
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4
       - name: Install Just
