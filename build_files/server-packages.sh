@@ -3,7 +3,6 @@
 set -euox pipefail
 
 echo "Running server packages scripts..."
-#/ctx/build_files/server-docker-ce.sh
 
 # common packages installed to servers
 dnf install -y \

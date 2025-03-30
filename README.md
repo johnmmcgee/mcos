@@ -1,7 +1,7 @@
 # mcOS
 
 [![mcos Build Desktop](https://github.com/johnmmcgee/mcos/actions/workflows/build-desktop.yml/badge.svg)](https://github.com/johnmmcgee/mcos/actions/workflows/build-desktop.yml)
-[![bOS Build Server](https://github.com/johnmmcgee/mcos/actions/workflows/build-server.yml/badge.svg)](https://github.com/johnmmcgee/mcos/actions/workflows/build-server.yml)
+[![mcos Build Server](https://github.com/johnmmcgee/mcos/actions/workflows/build-server.yml/badge.svg)](https://github.com/johnmmcgee/mcos/actions/workflows/build-server.yml)
 
 
 These are mostly stock project bluefin images that I created for my own personal use.  
