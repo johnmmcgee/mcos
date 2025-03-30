@@ -31,12 +31,12 @@ case "${IMAGE}" in
 #    /ctx/build_files/desktop-fixups-steam.sh
     /ctx/build_files/desktop-packages.sh
     ;;
-"ucore")
-    /ctx/build_files/server-changes.sh
-    /ctx/build_files/server-cockpit-modules.sh
-    /ctx/build_files/server-packages.sh
-    ;;
-esac
+"ucore"*) 
+    if [[ "${IMAGE}" != "ucore-minimal" ]]; then
+        /ctx/build_files/server-changes.sh
+        /ctx/build_files/server-cockpit-modules.sh
+        /ctx/build_files/server-packages.sh
+    fi
 
 #/ctx/build_files/branding.sh
 /ctx/build_files/signing.sh
