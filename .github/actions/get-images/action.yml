@@ -4,7 +4,7 @@ name: Get Images for Build
 description: Get Images for Build
 inputs:
   image_flavor:
-    description: "Types of Image to Build (Bazzite, Desktop, Server)"
+    description: "Types of Image to Build (Desktop, Server)"
     required: true
 outputs:
   images:
