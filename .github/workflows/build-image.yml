@@ -1,5 +1,5 @@
 ---
-name: Build bOS Images
+name: Build mcOS Images
 on:  # yamllint disable-line rule:truthy
   workflow_call:
     inputs:
