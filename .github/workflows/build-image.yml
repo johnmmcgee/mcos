@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 env:
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
-  IMAGE_STYLED: mcos
+  IMAGE_NAME: mcos
   SET_X: 1
 jobs:
   get-images:

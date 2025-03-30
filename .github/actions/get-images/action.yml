@@ -1,5 +1,4 @@
 ---
-# tags https://github.com/orgs/ublue-os/packages?repo_name=bluefin
 name: Get Images for Build
 description: Get Images for Build
 inputs:
