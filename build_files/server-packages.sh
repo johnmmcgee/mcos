@@ -36,6 +36,3 @@ dnf remove -y \
 dnf install -y \
         nfs-utils \
         || true
-
-#hacky!
-rpm -i /ctx/includes/cockpit-389-ds-3.1.2-1.fc41.noarch.rpm
