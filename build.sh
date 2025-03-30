@@ -38,5 +38,5 @@ case "${IMAGE}" in
     ;;
 esac
 
-/ctx/build_files/branding.sh
+#/ctx/build_files/branding.sh
 /ctx/build_files/signing.sh
