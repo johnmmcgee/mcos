@@ -36,3 +36,8 @@ dnf remove -y \
 dnf install -y \
         nfs-utils \
         || true
+
+# Starship Shell Prompt
+curl --retry 3 -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-…
+tar -xzf /tmp/starship.tar.gz -C /tmp
+install -c -m 0755 /tmp/starship /usr/bin
