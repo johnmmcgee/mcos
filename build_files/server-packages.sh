@@ -10,6 +10,7 @@ dnf install -y \
   acpica-tools \
   btop \
   cockpit-storaged \
+  fish \
   hdparm \
   igt-gpu-tools \
   iotop \
