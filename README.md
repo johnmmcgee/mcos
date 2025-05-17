@@ -11,7 +11,7 @@ Intial ideas for this repo stemed from:
 
 ## Usage
 
-We build `stable` which follows the project-bluefin stable branch.  We also build `-latest` that follows the 'latest' branch. 
+We build `stable` which follows the project-bluefin stable branch. 
 See: https://docs.projectbluefin.io/administration under Upgrades and Throttle Settings. 
 
   Standard - stable
