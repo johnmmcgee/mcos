@@ -14,7 +14,7 @@ autostart_skel="/etc/skel.d/.config/autostart"
 
 # check if we are the first user
 if [ "$(id -u)" -eq 1000 ] && [ -d "$HOME" ]; then
-    
+
     # check if there was a major version update or firstboot setup file was removed
     [ -f "$last_fedora_major_file" ] && last_fedora_major=$(cat "$last_fedora_major_file")
     current_fedora_major=$(get_fedora_major_version)

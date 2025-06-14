@@ -10,8 +10,8 @@ images := '(
     [cosmic]="cosmic"
     [cosmic-nvidia]="cosmic-nvidia"
     [ucore-minimal]="stable"
-    [ucore]="stable-zfs"
-    [ucore-nvidia]="stable-nvidia-zfs"
+    [ucore]="stable"
+    [ucore-nvidia]="stable-nvidia"
 )'
 export SUDO_DISPLAY := if `if [ -n "${DISPLAY:-}" ] || [ -n "${WAYLAND_DISPLAY:-}" ]; then echo true; fi` == "true" { "true" } else { "false" }
 export SUDOIF := if `id -u` == "0" { "" } else if SUDO_DISPLAY == "true" { "sudo --askpass" } else { "sudo" }
