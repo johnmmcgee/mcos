@@ -10,6 +10,7 @@ dnf install -y \
   acpica-tools \
   btop \
   cockpit-storaged \
+  fio \
   fish \
   hdparm \
   igt-gpu-tools \
@@ -21,6 +22,7 @@ dnf install -y \
   netdata \
   nmap \
   sanoid \
+  smartmontools \
   tuned \
   tuned-profiles-atomic \
   tuned-profiles-cpu-partitioning \
