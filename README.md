@@ -17,22 +17,27 @@ See: https://docs.projectbluefin.io/administration under Upgrades and Throttle S
   Standard - stable
   
     rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:bluefin
+    bootc switch ghcr.io/johnmmcgee/mcos:aurora
 
   NVidia drivers - stable
   
     rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:bluefin-nvidia
+    bootc switch ghcr.io/johnmmcgee/mcos:aurora
 
   uCore
   
     rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:ucore
+    bootc switch ghcr.io/johnmmcgee/mcos:ucore
 
   uCore NVidia drivers
   
     rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:ucore-nvidia
+    bootc switch ghcr.io/johnmmcgee/mcos:ucore-nvidia
 
   uCore Minimal
 
     rpm-ostree rebase ostree-image-signed:docker://ghcr.io/johnmmcgee/mcos:ucore-minimal
+    bootc switch ghcr.io/johnmmcgee/mcos:ucore-minimal
 
 
 
