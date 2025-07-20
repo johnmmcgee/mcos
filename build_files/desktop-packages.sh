@@ -16,8 +16,6 @@ dnf install -y \
   cachefilesd \
   ddcutil \
   gh \
-  gnome-shell-extension-appindicator \
-  gnome-shell-extension-no-overview \
   highlight \
   intel-compute-runtime \
   iotop \
@@ -56,6 +54,12 @@ dnf install -y \
   wireguard-tools \
   wl-clipboard \
   zsh
+
+if [[ ${IMAGE} =~ bluefin ]]; then
+  dnf install -y \
+    gnome-shell-extension-appindicator \
+    gnome-shell-extension-no-overview
+fi
 
 # common packages excluded from desktop
 dnf remove -y \

@@ -4,7 +4,7 @@ set -euox pipefail
 
 echo "Tweaking existing desktop config..."
 
-if [[ ${IMAGE} =~ bluefin|bazzite ]]; then
+if [[ ${IMAGE} =~ bluefin|aurora ]]; then
   # ensure /opt and /usr/local are correct
   if [[ ! -h /opt ]]; then
       rm -fr /opt
@@ -37,11 +37,13 @@ if [[ ${IMAGE} =~ bluefin|bazzite ]]; then
   rm -f /usr/share/applications/nvtop.desktop 
 
   # custom gnome overrides
-  mkdir -p /tmp/ublue-schema-test && \
-    find /usr/share/glib-2.0/schemas/ -type f ! -name "*.gschema.override" -exec cp {} /tmp/ublue-schema-test/ \; && \
-    cp /usr/share/glib-2.0/schemas/*-mcos-modifications.gschema.override /tmp/ublue-schema-test/ && \
-    echo "Running error test for mcos gschema override. Aborting if failed." && \
-    glib-compile-schemas --strict /tmp/ublue-schema-test || exit 1 && \
-    echo "Compiling gschema to include mcos setting overrides" && \
-    glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null
+  if [[ ${IMAGE} =~ bluefin ]]; then
+    mkdir -p /tmp/ublue-schema-test && \
+      find /usr/share/glib-2.0/schemas/ -type f ! -name "*.gschema.override" -exec cp {} /tmp/ublue-schema-test/ \; && \
+      cp /usr/share/glib-2.0/schemas/*-mcos-modifications.gschema.override /tmp/ublue-schema-test/ && \
+      echo "Running error test for mcos gschema override. Aborting if failed." && \
+      glib-compile-schemas --strict /tmp/ublue-schema-test || exit 1 && \
+      echo "Compiling gschema to include mcos setting overrides" && \
+      glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null
+  fi
 fi
