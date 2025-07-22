@@ -53,19 +53,25 @@ dnf install -y \
   virt-viewer \
   wireguard-tools \
   wl-clipboard \
-  zsh
+  zsh || true
 
 if [[ ${IMAGE} =~ bluefin ]]; then
   dnf install -y \
     gnome-shell-extension-appindicator \
     gnome-shell-extension-no-overview
+  dnf remove -y gnome-tour || true
+  
+fi
+
+if [[ ${IMAGE} =~ aurora ]]; then
+  dnf -y copr enable deltacopy/darkly
+  dnf install -y darkly || true
 fi
 
 # common packages excluded from desktop
 dnf remove -y \
   firefox \
-  firefox-langpacks \
-  gnome-tour || true
+  firefox-langpacks || true
 
 ## github direct installs
 /ctx/build_files/github-release-install.sh twpayne/chezmoi x86_64
@@ -84,6 +90,8 @@ dnf remove -y \
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo
 dnf install -y code
+
+
 
 # ghostty
 #dnf -y copr enable pgdev/ghostty
