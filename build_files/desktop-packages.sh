@@ -10,6 +10,7 @@ dnf install -y \
   alacritty \
   ansible \
   autofs \
+  bat \
   btop \
   borgbackup \
   buildah \
