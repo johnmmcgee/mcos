@@ -1,11 +1,14 @@
 #!/bin/bash
 
+profile=$(grep -E '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"')
+echo "Detected: $profile"
+
 read -p "Do you want to install all system flatpaks? (y/n): " choice
 if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
 
-    echo "Disable all repos but flatub for this install .. "
-    flatpak remote-delete fedora --force
-    flatpak remote-delete fedora-testing --force
+    echo "Disable all repos but flathub for this install .. "
+    flatpak remote-delete fedora --force || true
+    flatpak remote-delete fedora-testing --force || true
 
     read -p "Do you want to clean and remove all current system flatpaks? (recommended for first run) (y/n): " choice
     if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
@@ -26,44 +29,64 @@ if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
       org.signal.Signal \
       org.telegram.desktop
 
-    echo "Devolopment applications ..."
-    flatpak install -y --system \
-      com.visualstudio.code \
-      com.visualstudio.code.tool.podman//23.08 # com.visualstudio.code.tool.podman
-    flatpak override --system --filesystem=xdg-run/podman com.visualstudio.code
-    systemctl enable --system --now podman.socket
+#    echo "Development applications ..."
+#    flatpak install -y --system \
+#      com.visualstudio.code \
+#      com.visualstudio.code.tool.podman//23.08 # com.visualstudio.code.tool.podman
+#    flatpak override --system --filesystem=xdg-run/podman com.visualstudio.code
+#    systemctl enable --now podman.socket
 
     echo "Gaming applications ..."
     flatpak install -y --system \
-      com.mojang.Minecraft \
+      org.polymc.PolyMC \
       com.valvesoftware.Steam
 
-    echo "Gnome applications ..."
-    flatpak install -y --system \
-      org.fedoraproject.MediaWriter \
-      org.gnome.baobab \
-      org.gnome.Calculator \
-      org.gnome.Calendar \
-      org.gnome.Characters \
-      org.gnome.Evince \
-      org.gnome.Firmware \
-      org.gnome.font-viewer \
-      org.gnome.Logs \
-      org.gnome.Loupe \
-      org.gnome.NautilusPreviewer \
-      org.gnome.seahorse.Application \
-      org.gnome.TextEditor \
-      org.gnome.Weather \
-      com.mattjakeman.ExtensionManager
+    case "$profile" in
+      aurora)
+        echo "Installing KDE (aurora) Flatpaks..."
+        flatpak install -y --system \
+          org.kde.kalk \
+          org.kde.gwenview \
+          org.kde.kontact \
+          org.kde.okular \
+          org.kde.kweather \
+          org.kde.kclock \
+          org.kde.haruna \
+          org.kde.skanpage \
+          runtime/org.gtk.Gtk3theme.Breeze
+        ;;
+      bluefin)
+        echo "Installing GNOME (bluefin) Flatpaks..."
+        flatpak install -y --system \
+          org.fedoraproject.MediaWriter \
+          org.gnome.baobab \
+          org.gnome.Calculator \
+          org.gnome.Calendar \
+          org.gnome.Characters \
+          org.gnome.Evince \
+          org.gnome.Firmware \
+          org.gnome.font-viewer \
+          org.gnome.Logs \
+          org.gnome.Loupe \
+          org.gnome.NautilusPreviewer \
+          org.gnome.seahorse.Application \
+          org.gnome.TextEditor \
+          org.gnome.Weather \
+          com.mattjakeman.ExtensionManager
+        ;;
+      *)
+        echo "Unknown profile '$profile' - no profile-specific installs performed."
+        ;;
+    esac
 
     echo "Internet applications ..."
     flatpak install -y --system \
       com.github.micahflee.torbrowser-launcher \
       org.mozilla.firefox
 
-    echo "Multimeda applications ..."
+    echo "Multimedia applications ..."
     flatpak install -y --system \
-      com.github.rafostar.Clapper \
+      sh.cider.genten \
       com.spotify.Client \
       org.freedesktop.Platform.ffmpeg-full//22.08
 
@@ -75,32 +98,11 @@ if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
     flatpak install -y --system \
       com.usebottles.bottles \
       io.github.dvlv.boxbuddyrs \
+      com.github.tchx84.Flatseal \
       io.missioncenter.MissionCenter \
+      md.obsidian.Obsidian \
       net.cozic.joplin_desktop \
-      org.keepassxc.KeePassXC 
+      org.keepassxc.KeePassXC \
+      com.borgbase.Vorta
 
 fi
-
-# KDE PACKAGES
-# app/org.mozilla.Thunderbird
-# app/org.mozilla.firefox
-# app/org.kde.kcalc
-# app/org.kde.gwenview
-# app/org.kde.kontact
-# app/org.kde.okular
-# app/org.kde.kweather
-# app/org.kde.kclock
-# app/org.fkoehler.KTailctl
-# app/org.kde.haruna
-# app/com.github.tchx84.Flatseal
-# app/com.ranfdev.DistroShelf
-# app/io.github.flattool.Warehouse
-# app/org.fedoraproject.MediaWriter
-# app/io.missioncenter.MissionCenter
-# app/org.gnome.DejaDup
-# app/com.borgbase.Vorta
-# app/io.github.input_leap.input-leap
-# runtime/org.gtk.Gtk3theme.Breeze
-# app/io.github.pwr_solaar.solaar
-# app/org.gustavoperedo.FontDownloader
-# app/org.kde.skanpage

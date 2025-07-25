@@ -20,6 +20,7 @@ dnf install -y \
   intel-compute-runtime \
   iotop \
   iperf3 \
+  igt-gpu-tools \
   iscan-firmware \
   kitty \
   langpacks-en \
