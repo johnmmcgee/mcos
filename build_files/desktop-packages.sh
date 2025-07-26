@@ -91,6 +91,7 @@ dnf remove -y \
 
 
 # bitwarden
+mkdir -p /var/opt/Bitwarden
 curl -L https://bitwarden.com/download/?app=desktop\&platform=linux\&variant=rpm -o bitwarden.rpm
 dnf install -y bitwarden.rpm
 
