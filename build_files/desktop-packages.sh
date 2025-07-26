@@ -68,11 +68,7 @@ fi
 if [[ ${IMAGE} =~ aurora ]]; then
   dnf -y copr enable deltacopy/darkly
   dnf install -y darkly
-  pip install \
-    --prefix /usr 
-    --root-user-action \
-    konsave \
-    rclip || true
+  pip install --prefix /usr --root-user-action konsave || true
 fi
 
 # common packages excluded from desktop
@@ -93,6 +89,8 @@ fi
 #sed -i "s@Icon=zed@Icon=/usr/lib/zed.app/share/icons/hicolor/512x512/apps/zed.png@g" /usr/share/applications/dev.zed.Zed.desktop
 #sed -i "s@Exec=zed@Exec=/usr/lib/zed.app/libexec/zed-editor@g" /usr/share/applications/dev.zed.Zed.desktop
 
+#rclip
+pip install --prefix /usr --root-user-action rclip || true
 
 # bitwarden
 mkdir -p /var/opt/Bitwarden
