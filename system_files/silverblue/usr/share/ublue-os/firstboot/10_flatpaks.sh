@@ -29,13 +29,6 @@ if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
       org.signal.Signal \
       org.telegram.desktop
 
-#    echo "Development applications ..."
-#    flatpak install -y --system \
-#      com.visualstudio.code \
-#      com.visualstudio.code.tool.podman//23.08 # com.visualstudio.code.tool.podman
-#    flatpak override --system --filesystem=xdg-run/podman com.visualstudio.code
-#    systemctl enable --now podman.socket
-
     echo "Gaming applications ..."
     flatpak install -y --system \
       org.polymc.PolyMC \
