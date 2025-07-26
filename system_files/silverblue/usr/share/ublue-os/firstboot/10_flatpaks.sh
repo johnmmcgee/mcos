@@ -74,8 +74,7 @@ if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
 
     echo "Internet applications ..."
     flatpak install -y --system \
-      com.github.micahflee.torbrowser-launcher \
-      org.mozilla.firefox
+      com.github.micahflee.torbrowser-launcher
 
     echo "Multimedia applications ..."
     flatpak install -y --system \
