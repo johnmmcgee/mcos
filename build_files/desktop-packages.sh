@@ -98,12 +98,13 @@ dnf remove -y \
 mkdir -p /var/opt/Bitwarden
 curl -L https://bitwarden.com/download/?app=desktop\&platform=linux\&variant=rpm -o bitwarden.rpm
 dnf install -y bitwarden.rpm
+mv /var/opt/Bitwarden /usr/share/factory/bitwarden
+echo "L  /opt/Bitwarden  -  -  -  -  /usr/share/factory/bitwarden" > /usr/lib/tmpfiles.d/microsoft.conf
 
 # vscode stuff
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo
 dnf install -y code
-
 
 
 # ghostty
