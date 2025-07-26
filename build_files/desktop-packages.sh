@@ -91,7 +91,7 @@ dnf remove -y \
 
 
 # bitwarden
-curl -O bitwarden.rpm -L https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+curl -L https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm -o bitwarden.rpm
 dnf install -y bitwarden.rpm
 
 # vscode stuff
