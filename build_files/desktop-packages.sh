@@ -94,6 +94,8 @@ dnf remove -y \
 mkdir -p /var/opt/Bitwarden
 curl -L https://bitwarden.com/download/?app=desktop\&platform=linux\&variant=rpm -o bitwarden.rpm
 dnf install -y bitwarden.rpm
+mv /var/opt/Bitwarden /usr/share/factory/bitwarden
+echo "L  /opt/Bitwarden  -  -  -  -  /usr/share/factory/bitwarden" > /usr/lib/tmpfiles.d/microsoft.conf
 
 # vscode stuff
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
