@@ -76,9 +76,9 @@ if [[ ${IMAGE} =~ aurora ]]; then
 fi
 
 # common packages excluded from desktop
-dnf remove -y \
-  firefox \
-  firefox-langpacks || true
+#dnf remove -y \
+#  firefox \
+#  firefox-langpacks || true
 
 ## github direct installs
 /ctx/build_files/github-release-install.sh twpayne/chezmoi x86_64
