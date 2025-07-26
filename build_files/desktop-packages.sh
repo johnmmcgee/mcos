@@ -68,7 +68,7 @@ fi
 if [[ ${IMAGE} =~ aurora ]]; then
   dnf -y copr enable deltacopy/darkly
   dnf install -y darkly
-  pip install --prefix /usr --root-user-action konsave || true
+  pip install --prefix /usr --root-user-action  konsave || true
 fi
 
 # common packages excluded from desktop
