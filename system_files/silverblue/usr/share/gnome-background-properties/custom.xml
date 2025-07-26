@@ -3,7 +3,7 @@
 <wallpapers>
   <wallpaper>
     <name>aphex-orphans</name>
-    <filename>/usr/share/backgrounds/custom/aphex-orphans.png</filename>
+    <filename>/usr/share/wallpapers/mcos/aphex-orphans.png</filename>
     <options>zoom</options>
     <pcolor>#000000</pcolor>
     <scolor>#000000</scolor>
@@ -11,7 +11,7 @@
    </wallpaper>
   <wallpaper>
     <name>batmanshark</name>
-    <filename>/usr/share/backgrounds/custom/batmanshark.jpg</filename>
+    <filename>/usr/share/wallpapers/mcos/batmanshark.jpg</filename>
     <options>zoom</options>
     <pcolor>#000000</pcolor>
     <scolor>#000000</scolor>
@@ -19,7 +19,7 @@
   </wallpaper>
   <wallpaper>
     <name>calvinandhobbs</name>
-    <filename>/usr/share/backgrounds/custom/calvinandhobbs.jpg</filename>
+    <filename>/usr/share/wallpapers/mcos/calvinandhobbs.jpg</filename>
     <options>zoom</options>
     <pcolor>#000000</pcolor>
     <scolor>#000000</scolor>
@@ -27,7 +27,7 @@
   </wallpaper>
   <wallpaper>
     <name>michigan</name>
-    <filename>/usr/share/backgrounds/custom/michigan.jpg</filename>
+    <filename>/usr/share/wallpapers/mcos/michigan.jpg</filename>
     <options>zoom</options>
     <pcolor>#000000</pcolor>
     <scolor>#000000</scolor>
@@ -35,7 +35,7 @@
   </wallpaper>
   <wallpaper>
     <name>sciearth</name>
-    <filename>/usr/share/backgrounds/custom/sciearth.jpg</filename>
+    <filename>/usr/share/wallpapers/mcos/sciearth.jpg</filename>
     <options>zoom</options>
     <pcolor>#000000</pcolor>
     <scolor>#000000</scolor>
@@ -43,7 +43,7 @@
   </wallpaper>
   <wallpaper>
     <name>starforming</name>
-    <filename>/usr/share/backgrounds/custom/starforming.jpg</filename>
+    <filename>/usr/share/wallpapers/mcos/starforming.jpg</filename>
     <options>zoom</options>
     <pcolor>#000000</pcolor>
     <scolor>#000000</scolor>
