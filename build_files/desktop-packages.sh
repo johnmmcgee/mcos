@@ -55,7 +55,7 @@ dnf install -y \
   virt-viewer \
   wireguard-tools \
   wl-clipboard \
-  zsh || true
+  zsh
 
 if [[ ${IMAGE} =~ bluefin ]]; then
   dnf install -y \
@@ -67,8 +67,8 @@ fi
 
 if [[ ${IMAGE} =~ aurora ]]; then
   dnf -y copr enable deltacopy/darkly
-  dnf install -y darkly || true
-  pip install konsave || true
+  dnf install -y darkly
+  pip install --prefix /usr/local konsave || true
 fi
 
 # common packages excluded from desktop
@@ -88,6 +88,11 @@ dnf remove -y \
 #cp /usr/lib/zed.app/share/applications/zed.desktop /usr/share/applications/dev.zed.Zed.desktop
 #sed -i "s@Icon=zed@Icon=/usr/lib/zed.app/share/icons/hicolor/512x512/apps/zed.png@g" /usr/share/applications/dev.zed.Zed.desktop
 #sed -i "s@Exec=zed@Exec=/usr/lib/zed.app/libexec/zed-editor@g" /usr/share/applications/dev.zed.Zed.desktop
+
+
+# bitwarden
+curl -O bitwarden.rpm -L https://bitwarden.com/download/?app=desktop&platform=linux&variant=rpm
+dnf install -y bitwarden.rpm
 
 # vscode stuff
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
