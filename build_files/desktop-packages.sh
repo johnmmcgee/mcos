@@ -71,6 +71,9 @@ if [[ ${IMAGE} =~ aurora ]]; then
   pip install --prefix /usr --root-user-action  konsave || true
 fi
 
+dnf -y copr enable wezfurlong/wezterm-nightly
+dnf install -y wezterm
+
 # common packages excluded from desktop
 dnf install -y \
   firefox \
