@@ -17,7 +17,6 @@ if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
 
     fi
     
-    #sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
 
@@ -51,7 +50,6 @@ if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
       bluefin)
         echo "Installing GNOME (bluefin) Flatpaks..."
         flatpak install -y --system \
-          org.fedoraproject.MediaWriter \
           org.gnome.baobab \
           org.gnome.Calculator \
           org.gnome.Calendar \
@@ -91,6 +89,7 @@ if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
       com.usebottles.bottles \
       io.github.dvlv.boxbuddyrs \
       com.github.tchx84.Flatseal \
+      org.fedoraproject.MediaWriter \
       io.missioncenter.MissionCenter \
       md.obsidian.Obsidian \
       net.cozic.joplin_desktop \

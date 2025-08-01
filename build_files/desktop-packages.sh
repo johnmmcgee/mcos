@@ -80,7 +80,7 @@ dnf install -y \
   firefox-langpacks || true
 
 ## github direct installs
-/ctx/build_files/github-release-install.sh twpayne/chezmoi x86_64
+/ctx/build_files/github-release-install.sh Tomiyou/ivyterm x86_64
 
 # Zed because why not?
 #curl -Lo /tmp/zed.tar.gz \
