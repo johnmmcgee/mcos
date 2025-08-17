@@ -16,6 +16,7 @@ dnf install -y \
   buildah \
   cachefilesd \
   ddcutil \
+  geary \  
   gh \
   highlight \
   intel-compute-runtime \
