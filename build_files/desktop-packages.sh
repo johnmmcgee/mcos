@@ -51,6 +51,7 @@ dnf install -y \
   tealdeer \
   tmux \
   udica \
+  uv \
   virt-install \
   virt-manager \
   virt-viewer \
