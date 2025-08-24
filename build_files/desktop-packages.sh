@@ -16,7 +16,7 @@ dnf install -y \
   buildah \
   cachefilesd \
   ddcutil \
-  dirserv \
+  direnv \
   geary \
   gh \
   highlight \
