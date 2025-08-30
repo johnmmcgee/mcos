@@ -28,6 +28,7 @@ runs:
           images+=("bluefin" "bluefin-nvidia")
           ;;
         "Server")
+          images+=("cayo")
           images+=("ucore-minimal" "ucore" "ucore-nvidia")
           ;;
         esac

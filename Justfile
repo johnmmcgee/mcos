@@ -9,6 +9,7 @@ images := '(
     [bluefin-nvidia]="bluefin-nvidia"
     [cosmic]="cosmic"
     [cosmic-nvidia]="cosmic-nvidia"
+    [cayo]="fedora"
     [ucore-minimal]="stable"
     [ucore]="stable"
     [ucore-nvidia]="stable-nvidia"
@@ -86,6 +87,10 @@ build image="bluefin":
     "bazzite"*)
         BASE_IMAGE="${check}"
         TAG_VERSION=stable
+        ;;
+    "cayo")
+        BASE_IMAGE=cayo
+        TAG_VERSION="${check}"
         ;;
     "ucore-minimal"*)
         BASE_IMAGE=ucore-minimal
