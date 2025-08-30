@@ -18,6 +18,7 @@ dnf install -y \
   ddcutil \
   direnv \
   geary \
+  gnome-shell-extension-pop-shell \
   gh \
   highlight \
   intel-compute-runtime \
