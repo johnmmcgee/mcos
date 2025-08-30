@@ -72,17 +72,11 @@ profile=$(grep -E '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"')
 echo "Detected: $profile"
 
 if ! rpm -q firefox >/dev/null 2>&1; then
-    echo "Firefox not installed as RPM — will install Flatpak later..."
     need_firefox_flatpak=1
-else
-    echo "Firefox installed as RPM — skipping Flatpak install."
 fi
 
 if ! rpm -q bitwarden >/dev/null 2>&1; then
-    echo "Bitwarden not installed as RPM — will install Flatpak later..."
     need_bitwarden_flatpak=1
-else
-    echo "Bitwarden installed as RPM — skipping Flatpak install."
 fi
 
 read -p "Do you want to install all system flatpaks? (y/n): " choice
