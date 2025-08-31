@@ -68,6 +68,7 @@ build image="bluefin":
         exit 1
     fi
     BUILD_ARGS=()
+    DIST_ABRV=fc
     DNF=dnf5
 
     case "{{ image }}" in
