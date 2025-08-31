@@ -4,6 +4,10 @@ set -euox pipefail
 
 echo "Running server packages scripts..."
 
+if [[ ${IMAGE} =~ cayo ]]; then
+    dnf -y copr enable ublue-os/staging
+fi
+
 # common packages installed to servers
 dnf install -y \
   389-ds-base \
@@ -38,6 +42,10 @@ dnf remove -y \
 dnf install -y \
         nfs-utils \
         || true
+
+if [[ ${IMAGE} =~ cayo ]]; then
+    dnf -y copr disable ublue-os/staging
+fi
 
 # Starship Shell Prompt
 curl --retry 3 -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz"
