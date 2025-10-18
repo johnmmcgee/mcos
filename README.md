@@ -45,5 +45,5 @@ See: https://docs.projectbluefin.io/administration under Upgrades and Throttle S
 
 These images are signed with sigstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the appropriate command:
 
-    cosign verify --key cosign.pub ghcr.io/johnmmcgee/ublue-custom
-    cosign verify --key cosign.pub ghcr.io/johnmmcgee/ublue-nvidia-custom
+    cosign verify --key cosign.pub ghcr.io/johnmmcgee/mcos
+    
