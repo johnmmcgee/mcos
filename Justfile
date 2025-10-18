@@ -481,7 +481,7 @@ verify-container container="" registry="ghcr.io/ublue-os" key="":
     # Get Cosign if Needed
     if [[ ! $(command -v cosign) ]]; then
         COSIGN_CONTAINER_ID=$({{ SUDOIF }} {{ PODMAN }} create ghcr.io/sigstore/cosign/cosign:v2.6.1 bash)
-        {{ SUDOIF }} {{ PODMAN }} cp "${COSIGN_CONTAINER_ID}":/usr/local/bin/cosign /usr/local/bin/cosign
+        {{ SUDOIF }} {{ PODMAN }} cp "${COSIGN_CONTAINER_ID}":/ko-app/cosign /usr/local/bin/cosign
         {{ SUDOIF }} {{ PODMAN }} rm -f "${COSIGN_CONTAINER_ID}"
     fi
 
