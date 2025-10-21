@@ -18,7 +18,6 @@ dnf install -y \
   ddcutil \
   direnv \
   geary \
-  gnome-shell-extension-pop-shell \
   gh \
   highlight \
   intel-compute-runtime \
@@ -66,7 +65,7 @@ if [[ ${IMAGE} =~ bluefin ]]; then
     gnome-shell-extension-appindicator \
     gnome-shell-extension-no-overview
   dnf remove -y gnome-tour || true
-  
+
 fi
 
 if [[ ${IMAGE} =~ aurora ]]; then
