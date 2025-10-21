@@ -74,9 +74,6 @@ if [[ ${IMAGE} =~ aurora ]]; then
   pip install --prefix /usr --root-user-action  konsave || true
 fi
 
-dnf -y copr enable wezfurlong/wezterm-nightly
-dnf install -y wezterm
-
 # common packages excluded from desktop
 dnf install -y \
   firefox \
@@ -94,9 +91,6 @@ dnf install -y \
 #cp /usr/lib/zed.app/share/applications/zed.desktop /usr/share/applications/dev.zed.Zed.desktop
 #sed -i "s@Icon=zed@Icon=/usr/lib/zed.app/share/icons/hicolor/512x512/apps/zed.png@g" /usr/share/applications/dev.zed.Zed.desktop
 #sed -i "s@Exec=zed@Exec=/usr/lib/zed.app/libexec/zed-editor@g" /usr/share/applications/dev.zed.Zed.desktop
-
-#rclip
-pip install --prefix /usr --root-user-action rclip || true
 
 # bitwarden
 mkdir -p /var/opt/Bitwarden
@@ -123,13 +117,22 @@ cat <<EOF > /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
 </policyconfig>
 EOF
 
+# cursor
+dnf -y copr enable unixlover/cursor
+dnf install -y cursor
+
+# ghostty
+dnf -y copr enable pgdev/ghostty
+dnf install -y ghostty
+
+# rclip
+pip install --prefix /usr --root-user-action rclip || true
+
 # vscode stuff
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo
 dnf install -y code
 
-
-# ghostty
-#dnf -y copr enable pgdev/ghostty
-#dnf install -y ghostty
-#sed -i "s@enabled=1@enabled=0@" /etc/yum.repos.d/_copr*.repo
+# wezterm
+dnf -y copr enable wezfurlong/wezterm-nightly
+dnf install -y wezterm
