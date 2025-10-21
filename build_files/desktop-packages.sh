@@ -122,7 +122,7 @@ dnf -y copr enable unixlover/cursor
 dnf install -y cursor
 
 # ghostty
-dnf -y copr enable pgdev/ghostty
+dnf -y copr enable scottames/ghostty
 dnf install -y ghostty
 
 # rclip
