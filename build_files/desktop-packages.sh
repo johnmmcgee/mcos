@@ -15,6 +15,7 @@ dnf install -y \
   borgbackup \
   buildah \
   cachefilesd \
+  clinfo \
   ddcutil \
   direnv \
   geary \

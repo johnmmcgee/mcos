@@ -9,6 +9,7 @@ dnf install -y \
   389-ds-base \
   acpica-tools \
   btop \
+  clinfo \
   cockpit-storaged \
   fio \
   fish \

@@ -17,14 +17,6 @@ fi
 
 rpm-ostree install dnf5 dnf5-plugins
 
-# temp until https://github.com/ublue-os/main/pull/665 trickles down:
-mkdir -p /usr/share/dnf/plugins
-cat << EOF > /usr/share/dnf/plugins/copr.vendor.conf
-[main]
-distribution = fedora
-EOF
-
-
 case "${IMAGE}" in
 "aurora"* | "bluefin"*)
     /ctx/build_files/desktop-changes.sh
