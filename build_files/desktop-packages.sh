@@ -119,8 +119,8 @@ cat <<EOF > /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
 EOF
 
 # cursor
-dnf -y copr enable unixlover/cursor
-dnf install -y cursor
+# dnf -y copr enable unixlover/cursor
+# dnf install -y cursor
 
 # ghostty
 dnf -y copr enable scottames/ghostty
