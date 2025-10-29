@@ -21,13 +21,15 @@ dnf install -y \
   netcat \
   netdata \
   nmap \
+  nvtop \
   sanoid \
   smartmontools \
   tuned \
   tuned-profiles-atomic \
   tuned-profiles-cpu-partitioning \
   tuned-utils \
-  tuned-utils-systemtap
+  tuned-utils-systemtap \
+  vulkan-tools \
 
 # common packages removed from servers
 dnf remove -y \

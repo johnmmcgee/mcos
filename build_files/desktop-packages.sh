@@ -56,6 +56,7 @@ dnf install -y \
   virt-install \
   virt-manager \
   virt-viewer \
+  vulkan-tools \
   wireguard-tools \
   wl-clipboard \
   zsh
