@@ -30,7 +30,15 @@ dnf install -y \
   tuned-profiles-cpu-partitioning \
   tuned-utils \
   tuned-utils-systemtap \
-  vulkan-tools \
+  vulkan-tools
+
+# libvirt
+dnf install -y \
+  cockpit-machines \
+  libvirt-client \
+  libvirt-daemon-kvm \
+  ublue-os-libvirt-workarounds \
+  virt-install
 
 # common packages removed from servers
 dnf remove -y \
