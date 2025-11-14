@@ -23,6 +23,7 @@ dnf install -y \
   netdata \
   nmap \
   nvtop \
+  realtek-firmware \
   sanoid \
   smartmontools \
   tuned \
