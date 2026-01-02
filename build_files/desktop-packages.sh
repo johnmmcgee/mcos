@@ -46,6 +46,7 @@ dnf install -y \
   podman-tui \
   powertop \
   python3-pip \
+  python3.12 \
   rclone \
   slirp4netns \
   stow \
