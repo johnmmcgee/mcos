@@ -15,6 +15,8 @@ dnf install -y \
   fish \
   hdparm \
   igt-gpu-tools \
+  intel-compute-runtime \
+  libva-intel-media-drver \
   iotop \
   iperf3 \
   lm_sensors \
