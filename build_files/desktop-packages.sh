@@ -22,7 +22,7 @@ dnf install -y \
   gh \
   highlight \
   intel-compute-runtime \
-  libva-intel-media-drver \
+  libva-intel-media-driver \
   iotop \
   iperf3 \
   igt-gpu-tools \
