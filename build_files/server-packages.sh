@@ -32,6 +32,7 @@ dnf install -y \
   tuned-profiles-cpu-partitioning \
   tuned-utils \
   tuned-utils-systemtap \
+  vim-default-editor \
   vulkan-tools
 
 # libvirt

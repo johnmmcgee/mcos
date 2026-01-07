@@ -56,6 +56,7 @@ dnf install -y \
   tmux \
   udica \
   uv \
+  vim-default-editor \
   virt-install \
   virt-manager \
   virt-viewer \
