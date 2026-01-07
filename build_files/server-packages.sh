@@ -22,7 +22,6 @@ dnf install -y \
   lm_sensors \
   lshw \
   netcat \
-  netdata \
   nmap \
   nvtop \
   realtek-firmware \
