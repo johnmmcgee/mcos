@@ -139,5 +139,5 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 dnf install -y code
 
 # wezterm
-dnf -y copr enable wezfurlong/wezterm-nightly
-dnf install -y wezterm
+#dnf -y copr enable wezfurlong/wezterm-nightly
+#dnf install -y wezterm
