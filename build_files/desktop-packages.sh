@@ -6,7 +6,7 @@ echo "Running desktop packages scripts..."
 #/ctx/build_files/desktop-1password.sh
 
 # common packages installed to desktops
-dnf install -y \
+dnf install --allowerasing -y \
   alacritty \
   ansible \
   autofs \
