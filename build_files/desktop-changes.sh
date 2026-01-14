@@ -4,7 +4,7 @@ set -euox pipefail
 
 echo "Tweaking existing desktop config..."
 
-if [[ ${IMAGE} =~ bluefin|aurora ]]; then
+if [[ ${IMAGE} =~ bluefin|aurora|bazzite ]]; then
   # ensure /opt and /usr/local are correct
   if [[ ! -h /opt ]]; then
       rm -fr /opt

@@ -18,7 +18,7 @@ fi
 rpm-ostree install dnf5 dnf5-plugins
 
 case "${IMAGE}" in
-"aurora"* | "bluefin"*)
+"aurora"* | "bluefin"* )
     /ctx/build_files/desktop-changes.sh
 #    /ctx/build_files/desktop-fixups-steam.sh
     /ctx/build_files/desktop-packages.sh
@@ -29,6 +29,11 @@ case "${IMAGE}" in
         /ctx/build_files/server-cockpit-modules.sh
         /ctx/build_files/server-packages.sh
     fi
+"bazzite"*)
+    /ctx/build_files/desktop-changes.sh
+    #    /ctx/build_files/desktop-fixups-steam.sh
+    /ctx/build_files/desktop-packages.sh
+    ;;
 esac
 
 #/ctx/build_files/branding.sh

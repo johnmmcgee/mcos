@@ -24,6 +24,9 @@ runs:
         "Aurora")
           images+=("aurora" "aurora-nvidia")
           ;;
+        "Bazzite")
+          images+=("bazzite" "bazzite-nvidia")
+          ;;
         "Bluefin")
           images+=("bluefin" "bluefin-nvidia")
           ;;
