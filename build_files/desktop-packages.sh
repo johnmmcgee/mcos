@@ -138,6 +138,16 @@ rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo
 dnf install -y code
 
+# lazygit
+dnf copr -y enable dejan/lazygit
+dnf install -y lazygit
+dnf copr -y disable dejan/lazygit
+
+# zellij
+dnf copr -y enable varlad/zellij
+dnf install -y zellij
+dnf copr -y disable varlad/zellij
+
 # wezterm
 #dnf -y copr enable wezfurlong/wezterm-nightly
 #dnf install -y wezterm
