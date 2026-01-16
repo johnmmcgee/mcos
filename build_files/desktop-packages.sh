@@ -7,7 +7,6 @@ echo "Running desktop packages scripts..."
 
 # common packages installed to desktops
 dnf install --allowerasing -y \
-  alacritty \
   ansible \
   autofs \
   bat \
@@ -27,7 +26,6 @@ dnf install --allowerasing -y \
   iperf3 \
   igt-gpu-tools \
   iscan-firmware \
-  kitty \
   langpacks-en \
   libretls \
   libvirt-client \

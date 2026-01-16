@@ -44,6 +44,7 @@ gaming_flatpaks=(
 
 internet_flatpaks=(
     com.github.micahflee.torbrowser-launcher
+    org.squidowl.halloy
 )
 
 multimedia_flatpaks=(
@@ -54,6 +55,7 @@ multimedia_flatpaks=(
 
 productivity_flatpaks=(
     org.libreoffice.LibreOffice
+    dev.zed.zed
 )
 
 utilities_flatpaks=(
@@ -139,12 +141,18 @@ if [[ "$choice" =~ ^[Yy]$ ]]; then
     if [[ "$need_firefox_flatpak" == "1" ]]; then
         flatpak install -y --system org.mozilla.firefox
     fi
+    flatpak override org.squidowl.halloy --filesystem=home
+    mkdir -p ~/.var/app/org.squidowl.halloy/config
+    ln -s ~/.config/halloy ~/.var/app/org.squidowl.halloy/config/halloy
 
     echo "Multimedia applications ..."
     flatpak install -y --system "${multimedia_flatpaks[@]}"
 
     echo "Productivity applications ..."
     flatpak install -y --system "${productivity_flatpaks[@]}"
+    flatpak override dev.zed.Zed --filesystem=home
+    mkdir -p ~/.var/app/dev.zed.Zed/config
+    ln -s ~/.config/zed ~/.var/app/dev.zed.Zed/config/zed
   
     echo "Utilities ..."
     flatpak install -y --system "${utilities_flatpaks[@]}"
