@@ -44,6 +44,7 @@ dnf install --allowerasing -y \
   podman-compose \
   podman-tui \
   powertop \
+  ptouch-driver-foomatic \
   python3-pip \
   python3.12 \
   rclone \
