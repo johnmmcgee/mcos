@@ -27,6 +27,7 @@ dnf install --allowerasing -y \
   igt-gpu-tools \
   iscan-firmware \
   langpacks-en \
+  libgtop2 \
   libretls \
   libvirt-client \
   libvirt-daemon-kvm \
@@ -86,15 +87,15 @@ dnf install -y \
 ## github direct installs
 #/ctx/build_files/github-release-install.sh Tomiyou/ivyterm x86_64
 
-# Zed because why not?
-#curl -Lo /tmp/zed.tar.gz \
-#    https://zed.dev/api/releases/stable/latest/zed-linux-x86_64.tar.gz
-#mkdir -p /usr/lib/zed.app/
-#tar -xvf /tmp/zed.tar.gz -C /usr/lib/zed.app/ --strip-components=1
-#ln -s /usr/lib/zed.app/bin/zed /usr/bin/zed
-#cp /usr/lib/zed.app/share/applications/zed.desktop /usr/share/applications/dev.zed.Zed.desktop
-#sed -i "s@Icon=zed@Icon=/usr/lib/zed.app/share/icons/hicolor/512x512/apps/zed.png@g" /usr/share/applications/dev.zed.Zed.desktop
-#sed -i "s@Exec=zed@Exec=/usr/lib/zed.app/libexec/zed-editor@g" /usr/share/applications/dev.zed.Zed.desktop
+# Zed 
+curl -Lo /tmp/zed.tar.gz \
+    https://zed.dev/api/releases/stable/latest/zed-linux-x86_64.tar.gz
+mkdir -p /usr/lib/zed.app/
+tar -xvf /tmp/zed.tar.gz -C /usr/lib/zed.app/ --strip-components=1
+ln -s /usr/lib/zed.app/bin/zed /usr/bin/zed
+cp /usr/lib/zed.app/share/applications/zed.desktop /usr/share/applications/dev.zed.Zed.desktop
+sed -i "s@Icon=zed@Icon=/usr/lib/zed.app/share/icons/hicolor/512x512/apps/zed.png@g" /usr/share/applications/dev.zed.Zed.desktop
+sed -i "s@Exec=zed@Exec=/usr/lib/zed.app/libexec/zed-editor@g" /usr/share/applications/dev.zed.Zed.desktop
 
 # bitwarden
 mkdir -p /var/opt/Bitwarden
@@ -121,10 +122,6 @@ cat <<EOF > /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
 </policyconfig>
 EOF
 
-# cursor
-# dnf -y copr enable unixlover/cursor
-# dnf install -y cursor
-
 # ghostty
 dnf -y copr enable scottames/ghostty
 dnf install -y ghostty
@@ -146,6 +143,10 @@ dnf copr -y disable dejan/lazygit
 dnf copr -y enable varlad/zellij
 dnf install -y zellij
 dnf copr -y disable varlad/zellij
+
+# opencode
+curl -L https://opencode.ai/download/stable/linux-x64-rpm -o /tmp/opencode.rpm
+dnf install -y /tmp/opencode.rpm
 
 # wezterm
 #dnf -y copr enable wezfurlong/wezterm-nightly
