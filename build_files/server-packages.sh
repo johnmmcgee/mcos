@@ -40,7 +40,6 @@ dnf install -y \
   cockpit-machines \
   libvirt-client \
   libvirt-daemon-kvm \
-  ublue-os-libvirt-workarounds \
   virt-install
 
 # common packages removed from servers
