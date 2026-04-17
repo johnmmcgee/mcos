@@ -26,6 +26,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_flavor: ["Bluefin", "Aurora", "Bazzite"]
+        image_flavor: ["Bluefin", "Bazzite"]
     with:
       image_flavor: ${{ matrix.image_flavor }}
