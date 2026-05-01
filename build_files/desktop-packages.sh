@@ -85,7 +85,7 @@ dnf install -y \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 dnf config-manager setopt fedora-cisco-openh264.enabled=1
 dnf install -y intel-media-driver
-
+dnf install --allowerasing -y mozilla-openh264 openh264
 dnf install -y \
   firefox \
   firefox-langpacks || true
