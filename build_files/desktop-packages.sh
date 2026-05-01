@@ -80,6 +80,7 @@ if [[ ${IMAGE} =~ aurora ]]; then
 fi
 
 # common packages excluded from desktop
+dnf config-manager -y --set-enabled fedora-cisco-openh264
 dnf install -y \
   firefox \
   firefox-langpacks || true
