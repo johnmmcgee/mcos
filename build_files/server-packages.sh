@@ -21,10 +21,12 @@ dnf install --allowerasing -y \
   iperf3 \
   lm_sensors \
   lshw \
+  msmtp \
   netcat \
   nmap \
   nvtop \
   realtek-firmware \
+  s-nail \
   sanoid \
   smartmontools \
   tuned \
