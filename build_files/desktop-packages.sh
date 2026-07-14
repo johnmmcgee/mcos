@@ -136,9 +136,29 @@ dnf install -y ghostty
 pip install --prefix /usr --root-user-action rclip || true
 
 # vscode stuff
-rpm --import https://packages.microsoft.com/keys/microsoft.asc
-echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo
+cat >/etc/yum.repos.d/vscode.repo <<'EOF'
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+EOF
+
 dnf install -y code
+
+# oneapi
+cat >/etc/yum.repos.d/oneapi.repo <<'EOF'
+[oneAPI]
+name=Intel® oneAPI repository
+baseurl=https://yum.repos.intel.com/oneapi
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+EOF
+
+dnf install intel-oneapi-runtime-opencl intel-oneapi-runtime-dpcpp-cpp
 
 # lazygit
 dnf copr -y enable dejan/lazygit
