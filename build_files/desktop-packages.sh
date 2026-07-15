@@ -158,7 +158,7 @@ repo_gpgcheck=1
 gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 EOF
 
-dnf install -y intel-oneapi-toolkit
+dnf install -y intel-basekit
 
 # lazygit
 dnf copr -y enable dejan/lazygit
